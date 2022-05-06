@@ -25,9 +25,10 @@ jobs:
     inputs:
       testResultsFormat: VSTest
       testResultsFiles: '**/*.trx' 
-  - publish: $(build.artifactstagingdirectory)
-      artifact: WebApp
-
+  - task: PublishBuildArtifacts@1    
+      displayName: 'Publish Artifact: drop'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
 - job: Windows
   pool:
     vmImage: 'windows-2019'
