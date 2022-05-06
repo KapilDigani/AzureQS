@@ -25,7 +25,6 @@ jobs:
     inputs:
       testResultsFormat: VSTest
       testResultsFiles: '**/*.trx' 
-  steps:
   - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
     artifact: WebApp
   
