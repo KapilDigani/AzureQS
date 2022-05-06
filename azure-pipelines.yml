@@ -25,6 +25,8 @@ jobs:
     inputs:
       testResultsFormat: VSTest
       testResultsFiles: '**/*.trx' 
+  - publish: $(build.artifactstagingdirectory)
+      artifact: WebApp
 
 - job: Windows
   pool:
